@@ -1,0 +1,11 @@
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\Practica_V_II_Model.dll.config
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\Practica_V_II_Model.dll
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\Practica_V_II_Model.pdb
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\EntityFramework.dll
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\EntityFramework.xml
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\obj\Debug\Practica_V_II_Model.csprojAssemblyReference.cache
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\obj\Debug\Practica_V_II_Model.csproj.CopyComplete
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\obj\Debug\Practica_V_II_Model.dll
+C:\Users\Vicente Luna\source\repos\Practica_V_II\Practica_V_II_Model\obj\Debug\Practica_V_II_Model.pdb

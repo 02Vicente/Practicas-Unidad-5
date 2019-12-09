@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<head>
+    <style>
+        .linkbtnfull {
+            background-color: #f44336;
+            color: white;
+            font-size: medium;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        table {
+            font-family: Arial,sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+@{
+    Practica_V_I_Model.Models.Estudiantes1DBEntities1 db = new Practica_V_I_Model.Models.Estudiantes1DBEntities1();
+}
+<body>
+    <h2 style="text-align:center;background-color:black;color:white;font-style:oblique">
+        Detalles Estudiantes
+    </h2>
+    @using (Html.BeginForm())
+    {
+        <div class="well">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="background-color:black;color:white">Foto</th>
+                        <th style="background-color:black;color:white">Nombre</th>
+                        <th style="background-color:black;color:white">Apellidos</th>
+                        <th style="background-color:black;color:white">Direccion</th>
+                        <th style="background-color:black;color:white">Telefono</th>
+                        <th style="background-color:black;color:white">Cedula</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in db.tblEstudiante)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/Images/@item.ImageUrl" class="img-circle" alt="Kulu" width="100" height="70" />
+                            </td>
+                            <td>@item.Nombres</td>
+                            <td>@item.Apellidos</td>
+                            <td>@item.Direccion</td>
+                            <td>@item.Telefono</td>
+                            <td>@item.Cedula</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a class="btn btn-primary" style="margin-bottom:10px" href="Estudiantes"> Nuevo</a>
+        </div>
+    }
+
+</body>
+

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Practica_V_II_Model.Models.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado Estudiantes</h2>
+
+@*Search o filter*@
+<div class="form-inline">
+    <div class="col-sm-2">
+        <a class="btn btn-success" style="margin-bottom:10px" href="/Empleado/Create"> Create New</a>
+    </div>
+    <div class="form-inline">
+        <label>Buscar aqui:</label>
+        <input class="form-control" id="input_search" name="search" type="text" placeholder="busqueda..." />
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Ingreso)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody id="table_body">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Ingreso)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EmpleadoID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.EmpleadoID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EmpleadoID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*Realiza la busqueda, en la tabla*@
+@section scripts
+            {
+    <script>
+        $(document).ready(function () {
+            $("#input_search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#table_body tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

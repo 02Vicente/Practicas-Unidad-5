@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Estudiantes";
+}
+
+<head>
+    <style>
+        .linkbtnfull{
+            background-color:#f44336;
+            color:white;
+            font-size:medium;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        table{
+            font-family: Arial,sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th{
+            border: 1px solid #dddddd;
+            text-align:left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+@using (Html.BeginForm("FileUpload","Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tbody>
+            <tr>
+                <td style="text-align:center;background-color:black;color:white;font-family:Arial;font-style:oblique;font-size:x-large">
+                    Registro de Estudiantes
+                </td>
+            </tr>
+            <tr>
+                <td> @Html.TextBox("Nombres", "", "", new { placeholder = "Digite su Nombre..." }) </td>
+            </tr>
+            <tr>
+                <td> @Html.TextBox("Apellidos", "", "", new { placeholder = "Digite sus Apellidos..." }) </td>
+            </tr>
+            <tr>
+                <td> @Html.TextBox("Direccion", "", "", new { placeholder = "Digite su Direccion..." }) </td>
+            </tr>
+            <tr>
+                <td> @Html.TextBox("Telefono", "", "", new { placeholder = "Digite su Telefono..." }) </td>
+            </tr>
+            <tr>
+                <td> @Html.TextBox("Cedula", "", "", new { placeholder = "Digite su Cedula..." }) </td>
+            </tr>
+            <tr>
+                <td> <input type="file" name="file" id="file" class="btn btn-primary" /> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" class="btn btn-success" value="Save" /> </td>
+            </tr>
+        </tbody>
+    </table>
+}
